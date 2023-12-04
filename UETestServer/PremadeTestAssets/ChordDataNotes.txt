@@ -1,0 +1,1 @@
+A,B,C,D,E,F,G,Dm,Em,Am,MajorBarre1,MajorBarre2,MinorBarre1,MinorBarre2
