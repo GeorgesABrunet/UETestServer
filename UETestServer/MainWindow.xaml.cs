@@ -537,7 +537,7 @@ namespace UETestServer
                         Logger.Info("[SENDING]: raw JSON file --  {0}", LogData);
 
                     
-                        BroadcastMessage(tbMsgTopic.Text + tbMsgSubTopic.Text, JSONmsg);
+                        BroadcastMessage(tbMsgTopic.Text, JSONmsg);
                         SetStatus(lSendMessageStatus, "SENDING");
 
                         if (cbSendMsgAudioPC.IsChecked.Value)
@@ -553,7 +553,7 @@ namespace UETestServer
                             string audiolength = AudioData.Length.ToString();
                             Logger.Info("[SENDING]: byte array length --  {0}", audiolength);
 
-                            SendMsgAudioBytes(tbMsgTopic.Text + tbMsgSubTopic.Text, AudioData);
+                            SendMsgAudioBytes(tbMsgTopic.Text, AudioData);
                         }
                     }
                     else
