@@ -589,7 +589,7 @@ namespace UETestServer
                         string audiolength = AudioData.Length.ToString();
                         Logger.Info("[SENDING]: byte array length --  {0}", audiolength);
 
-                        SendMsgAudioBytes(UEEvent.Topic, AudioData);
+                        SendMsgAudioBytes(tbMsgTopic.Text, AudioData);
                     }
                 }
             }
