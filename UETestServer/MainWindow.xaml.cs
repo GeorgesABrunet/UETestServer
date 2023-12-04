@@ -242,7 +242,7 @@ namespace UETestServer
         {
             //var item = $"Timestamp: {DateTime.Now:O} | Topic: {eventArgs.ApplicationMessage.Topic} | Payload: {eventArgs.ApplicationMessage.ConvertPayloadToString()} | QoS: {eventArgs.ApplicationMessage.QualityOfServiceLevel}";
 
-            if (eventArgs.ClientId.Equals("DannyDeVito", StringComparison.OrdinalIgnoreCase))
+            if (eventArgs.ClientId.Equals("UETestServer", StringComparison.OrdinalIgnoreCase))
             {
                 return;
             }
@@ -722,7 +722,7 @@ namespace UETestServer
             string AudioTopicString = null;
             string AudioFilename = null;
             
-            JSONmsg = GetJSONfromFile(tb_SeqJsonFile1.Text);
+            JSONmsg = GetJSONfromFile(tb_SeqJsonFile1.Text); //convert JSON file into string
             
             FSequenceParams SequenceBit = new FSequenceParams();
             SequenceBit.JsonFilename = JSONmsg;
@@ -732,7 +732,6 @@ namespace UETestServer
             {
                 JsonLogData = JsonLogData.Substring(0, 30) + "... (truncated)";
             }
-
 
             SequenceBit.ContainsAudio = cbSendAudioFileForSequence.IsChecked.Value;
 
@@ -782,9 +781,6 @@ namespace UETestServer
         {
             if(QueuedMessages.Count() > 0)
             {
-                FSequenceParams tempMsgParams = new FSequenceParams();
-                tempMsgParams = QueuedMessages[SequencerIndex];
-                
                 Logger.Info("Sending next message...");
 
                 BroadcastMessage(QueuedMessages[SequencerIndex].SequenceTopicName, QueuedMessages[SequencerIndex].JsonFilename);

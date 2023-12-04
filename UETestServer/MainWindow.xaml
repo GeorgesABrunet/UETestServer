@@ -150,9 +150,8 @@
                             <TextBox Name="tb_SeqJsonFile1" HorizontalAlignment="Left" Margin="70,13,0,0" VerticalAlignment="Top" Width="306" Grid.Column="2" Height="20"/>
                             <Button Name="btn_FindSeqJsonFile1" HorizontalAlignment="Left" Content="JSON"  Margin="5,13,0,0"  VerticalAlignment="Top" Width="59" Height="19" Grid.Column="2" Click="btn_FindSeqJsonFile1_Click"/>
 
-                            <TextBlock HorizontalAlignment="Left" Margin="402,0,0,66" TextWrapping="Wrap" Text="(MQTT) Topic:" VerticalAlignment="Bottom" Width="90" Height="16" Grid.Column="2"/>
-                            <TextBox Name="tb_SeqTopic" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="2" Margin="402,0,0,42" TextWrapping="Wrap" Height="22" Text="messageTopic" Width="122"/>
-                            <TextBlock HorizontalAlignment="Left" Margin="402,0,0,26" TextWrapping="Wrap" Text="(Optional) Event:" VerticalAlignment="Bottom" Width="90" Height="16" Grid.Column="2"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="402,0,0,33" TextWrapping="Wrap" Text="(MQTT) Topic:" VerticalAlignment="Bottom" Width="90" Height="16" Grid.Column="2"/>
+                            <TextBox Name="tb_SeqTopic" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="2" Margin="402,0,0,6" TextWrapping="Wrap" Height="22" Text="messageTopic" Width="122"/>
 
                         </Grid>
 
