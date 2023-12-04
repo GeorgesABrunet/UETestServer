@@ -140,18 +140,18 @@
 
                             </Grid.ColumnDefinitions>
 
-                            <Button x:Name="cbAddMsgToQueue" HorizontalAlignment="Center" Margin="6,20,10,0"  Content="Add Msg &#xD;&#xA;to Queue" VerticalAlignment="Top" Width="88" Height="51" Grid.Column="1" Click="cbAddMsgToQueue_Click"/>
+                            <Button x:Name="cbAddMsgToQueue" Margin="10,20,11,0"  Content="Add Msg &#xD;&#xA;to Queue" VerticalAlignment="Top" Height="51" Grid.Column="1" Click="cbAddMsgToQueue_Click"/>
 
-                            <CheckBox x:Name="cbSendAudioFileForSequence" Content="Send Audio" HorizontalAlignment="Center" VerticalAlignment="Top" IsChecked="False" Width="86" Height="15" Margin="10,43,452,0" Grid.Column="2"/>
-                            <CheckBox x:Name="cbSendEmptyAudioForSequence" Content="Empty Audio" HorizontalAlignment="Center" VerticalAlignment="Top" IsChecked="False" Width="98" Height="15" Margin="109,43,341,0" Grid.Column="2"/>
+                            <CheckBox x:Name="cbSendAudioFileForSequence" Content="Send Audio" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="False" Width="86" Height="15" Margin="10,43,0,0" Grid.Column="2"/>
+                            <CheckBox x:Name="cbSendEmptyAudioForSequence" Content="Empty Audio" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="False" Width="99" Height="15" Margin="108,43,0,0" Grid.Column="2"/>
                             <Button Name="btn_FindSequenceAudioFile" HorizontalAlignment="Left" Content="Audio"  Margin="5,64,0,0" VerticalAlignment="Top" Width="59" Height="19" Grid.Column="2" Click="btn_FindSequenceAudioFile_Click"/>
                             <TextBox Name="tb_SequenceAudioFile" HorizontalAlignment="Left" Margin="70,63,0,0" VerticalAlignment="Top" Width="306" Height="20" Grid.Column="2" />
 
                             <TextBox Name="tb_SeqJsonFile1" HorizontalAlignment="Left" Margin="70,13,0,0" VerticalAlignment="Top" Width="306" Grid.Column="2" Height="20"/>
                             <Button Name="btn_FindSeqJsonFile1" HorizontalAlignment="Left" Content="JSON"  Margin="5,13,0,0"  VerticalAlignment="Top" Width="59" Height="19" Grid.Column="2" Click="btn_FindSeqJsonFile1_Click"/>
 
-                            <TextBlock HorizontalAlignment="Left" Margin="402,0,0,33" TextWrapping="Wrap" Text="(MQTT) Topic:" VerticalAlignment="Bottom" Width="90" Height="16" Grid.Column="2"/>
-                            <TextBox Name="tb_SeqTopic" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="2" Margin="402,0,0,6" TextWrapping="Wrap" Height="22" Text="messageTopic" Width="122"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="402,0,0,58" TextWrapping="Wrap" Text="(MQTT) Topic:" VerticalAlignment="Bottom" Width="90" Height="16" Grid.Column="2"/>
+                            <TextBox Name="tb_SeqTopic" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Column="2" Margin="402,0,0,31" TextWrapping="Wrap" Height="22" Text="messageTopic" Width="122"/>
 
                         </Grid>
 

@@ -717,18 +717,22 @@ namespace UETestServer
 
         private void cbAddMsgToQueue_Click(object sender, RoutedEventArgs e)
         {
+            if(tb_SeqJsonFile1.Text.Length == 0 && !cbSendAudioFileForSequence.IsChecked.Value)
+            {
+                Logger.Info("Can't add nothing boss");
+                return;
+            }
 
-            string JSONmsg = null;
             string AudioTopicString = null;
             string AudioFilename = null;
-            
-            JSONmsg = GetJSONfromFile(tb_SeqJsonFile1.Text); //convert JSON file into string
-            
+
+            string JSONmsg = GetJSONfromFile(tb_SeqJsonFile1.Text);
+
             FSequenceParams SequenceBit = new FSequenceParams();
             SequenceBit.JsonFilename = JSONmsg;
             
             string JsonLogData = SequenceBit.JsonFilename;
-            if (JsonLogData.Length > 30)
+            if (JsonLogData != null && JsonLogData.Length > 30)
             {
                 JsonLogData = JsonLogData.Substring(0, 30) + "... (truncated)";
             }
