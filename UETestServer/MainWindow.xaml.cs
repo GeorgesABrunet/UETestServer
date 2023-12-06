@@ -575,6 +575,17 @@ namespace UETestServer
                     BroadcastMessage(tbMsgTopic.Text, UEEvent);
                     SetStatus(lSendMessageStatus, "SENDING");
 
+                    string LogData = SerializeJson(UEEvent);
+                    if (LogData != null)
+                    {
+                        if (LogData.Length > 300)
+                        {
+                            LogData = LogData.Substring(0, 300) + "... (truncated)";
+                        }
+
+                        Logger.Info("[SENDING]: {0}", LogData);
+                    }
+
                     if (cbSendMsgAudioPC.IsChecked.Value == true)
                     {
                         UEEvent.data.Relevant_WAV = tbMsgAudioFilePC.Text;
